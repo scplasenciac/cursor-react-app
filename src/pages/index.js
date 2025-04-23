@@ -38,7 +38,7 @@ export default function Home() {
       <main className={styles.main}>
         <section className={styles.hero}>
           <Image 
-            src="/sports-hero.jpg" 
+            src={`${process.env.NODE_ENV === 'production' ? '/cursor-react-app' : ''}/sports-hero.jpg`}
             alt="Sports background" 
             className={styles.heroImage}
             width={1920}
