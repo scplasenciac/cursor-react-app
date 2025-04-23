@@ -8,6 +8,22 @@ const nextConfig = {
   },
   trailingSlash: true,
   distDir: 'out',
+  exportPathMap: async function () {
+    return {
+      '/': { page: '/' },
+      '/bmi': { page: '/bmi' },
+      '/booking': { page: '/booking' },
+    }
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      }
+    }
+    return config
+  },
 }
 
 module.exports = nextConfig 
