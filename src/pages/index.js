@@ -37,6 +37,15 @@ export default function Home() {
 
       <main className={styles.main}>
         <section className={styles.hero}>
+          <div className={styles.heroImage}>
+            <Image
+              src="/sports-hero.jpg"
+              alt="Sports background"
+              fill
+              priority
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
           <div className={styles.heroContent}>
             <h1 className={styles.title}>
               Bienvenido a <span className={styles.highlight}>FitMatch</span>
