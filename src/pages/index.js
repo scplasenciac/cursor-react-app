@@ -38,7 +38,7 @@ export default function Home() {
       <main className={styles.main}>
         <section className={styles.hero}>
           <Image 
-            src="https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg" 
+            src="/sports-hero.jpg" 
             alt="Sports background" 
             className={styles.heroImage}
             width={1920}
