@@ -7,7 +7,7 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  distDir: 'out',
+  distDir: 'build',
   exportPathMap: async function () {
     return {
       '/': { page: '/' },
@@ -24,12 +24,13 @@ const nextConfig = {
     }
     return config
   },
-  // Ensure static assets are properly handled
-  async exportPathMap(defaultPathMap) {
-    return {
-      ...defaultPathMap,
-      '/sports-hero.jpg': { page: '/sports-hero.jpg' },
-    }
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://localhost:3001/api/:path*',
+      },
+    ];
   },
 }
 
