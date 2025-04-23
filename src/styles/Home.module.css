@@ -30,7 +30,7 @@
   align-items: center;
   border-radius: 8px;
   overflow: hidden;
-  background-image: url('/cursor-react-app/sports-hero.jpg');
+  background-image: url('/sports-hero.jpg');
   background-size: cover;
   background-position: center;
 }
