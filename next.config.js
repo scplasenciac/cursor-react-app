@@ -22,6 +22,21 @@ const nextConfig = {
         fs: false,
       }
     }
+    // Ensure CSS modules are properly processed
+    config.module.rules.push({
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            modules: {
+              localIdentName: '[name]__[local]___[hash:base64:5]',
+            },
+          },
+        },
+      ],
+    })
     return config
   },
 }
