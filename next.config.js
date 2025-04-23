@@ -8,13 +8,6 @@ const nextConfig = {
   },
   trailingSlash: true,
   distDir: 'build',
-  exportPathMap: async function () {
-    return {
-      '/': { page: '/' },
-      '/bmi': { page: '/bmi' },
-      '/booking': { page: '/booking' },
-    }
-  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
@@ -23,14 +16,6 @@ const nextConfig = {
       }
     }
     return config
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'http://localhost:3001/api/:path*',
-      },
-    ];
   },
 }
 
