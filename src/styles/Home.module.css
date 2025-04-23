@@ -30,6 +30,9 @@
   align-items: center;
   border-radius: 8px;
   overflow: hidden;
+  background-image: url('/cursor-react-app/sports-hero.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero::before {
@@ -39,10 +42,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/sports-hero.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.7;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 

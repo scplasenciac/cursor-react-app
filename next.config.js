@@ -24,6 +24,13 @@ const nextConfig = {
     }
     return config
   },
+  // Ensure static assets are properly handled
+  async exportPathMap(defaultPathMap) {
+    return {
+      ...defaultPathMap,
+      '/sports-hero.jpg': { page: '/sports-hero.jpg' },
+    }
+  },
 }
 
 module.exports = nextConfig 
