@@ -1,0 +1,11 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  margin-top: 4rem; /* Account for fixed navbar */
+  padding: 1rem;
+} 
