@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
 
@@ -36,10 +37,14 @@ export default function Home() {
 
       <main className={styles.main}>
         <section className={styles.hero}>
-          <img 
-            src="/sports-hero.jpg" 
+          <Image 
+            src="https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg" 
             alt="Sports background" 
             className={styles.heroImage}
+            width={1920}
+            height={1080}
+            priority
+            quality={100}
           />
           <div className={styles.heroContent}>
             <h1 className={styles.title}>
